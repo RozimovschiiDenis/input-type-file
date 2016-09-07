@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Make your own custom file select button and export HTML, CSS, JS code in a few seconds">
+    <meta name="keywords" content="file chooser, file select, custom file select, file select css" />
+    <meta name="author" content="Rozimovschii Denis">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <title>Custom file button</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/normalize.css"> 
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/fileselect.css">
+    
+    <script src="js/clipboard.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script>
+        (function() {
+            fileChooseApp.init();
+        })();
+    </script>
+</head>
+
+
+<body>
+    <header class="header">
+		<h2>input<span class="type">[type]</span></h2>
+		<div class="social">
+		    <ul>
+                <li>
+                    <a href="https://beaverden.github.io" target="_blank">
+                        <i class="fa fa-sitemap" aria-hidden="true"></i>
+                    </a>
+                </li>
+		        <li>
+                    <a href="https://github.com/beaverden/input-type" target="_blank">
+		                <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+		        <li>
+		            <a href="mailto:rozimovschii.denis@yahoo.com">
+                       <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </li>
+		    </ul>
+		</div>
+		<div class="menu">
+            <button class="active"data-open="file">File</button>
+            <button data-open="checkbox">Checkbox</button>
+		</div>
+	</header>
+   
+    <div class="main">
+        <div class="copied" style="opacity: 0.0; display: none;">
+            <span>Text copied to clipboard</span>
+        </div>
+
+        <div class="samples">
+            <div class="sample">
+                <div class="block">
+                    <div class="label code-toggle" data-show="header1">
+                        Code
+                    </div>
+
+                    <div class="fileChoose1 preview">
+                        <div class="btn-choose">
+                            <div class="fileChoose1-label">Choose file...</div>
+                            <input type="file" class="file-input" data-box="fileChoose1" name="fileChoose1-file">
+                        </div>
+                    </div>
+                </div> <!-- /.block -->
+                <div id="header1" class="code-header" style="display: none; opacity: 0.0; ">
+                    <div id="html1" class="copy-link active">HTML</div>
+                    <div id="css1" class="copy-link">CSS</div>
+                    <div id="js1" class="copy-link">JS</div>
+                </div>  <!-- /.code-header -->
+            </div> <!-- /.sample -->
+
+            <div class="sample block">
+                <div class="block">
+                    <div class="label code-toggle" data-show="header2">
+                        Code
+                    </div>
+                    <div class="fileChoose2 preview block">
+                        <div class="btn-choose">  
+                            <span>Choose file...</span>
+                            <input type="file" class="file-input" data-box="fileChoose2" name="fileChoose2-file">
+                        </div>
+                        <div class="fileChoose2-label">No file</div>
+                    </div>
+                </div> <!-- /.block -->
+                <div id="header2" class="code-header" style="display: none; opacity: 0.0; ">
+                    <div id="html2" class="copy-link active">HTML</div>
+                    <div id="css2" class="copy-link">CSS</div>
+                    <div id="js2" class="copy-link">JS</div>
+                </div> <!-- /.code-header -->               
+            </div> <!-- /.sample -->
+        </div>   <!-- /.samples -->     
+
+    </div> <!-- /.main --> 
+
+
+    <script>
+        var FileSelectCustom = {
+            init: function() {
+                document.addEventListener("DOMContentLoaded", function() {
+                    var selects = document.getElementsByClassName("file-input");
+                    for (var i = 0; i<selects.length; i++) {
+
+                        selects[i].onchange = function() {
+                            var id = this.getAttribute("data-box");
+                            var label = document.getElementsByClassName(id + "-label")[0]
+                            label.innerHTML = this.files[0].name;
+                        }
+                    }
+                });
+            }
+        };
+        (function() {
+            FileSelectCustom.init();
+        })()
+    </script>
+    
+</body>
+</html>
+   
+
+   
