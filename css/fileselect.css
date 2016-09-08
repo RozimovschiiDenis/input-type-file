@@ -187,8 +187,28 @@ h2, h3, h4 {
 
 
 
+.faq {
+  padding : 30px 20px;
+  color: #fff;
+}
+
+.faq .q {
+  font-size: 30px;
+  font-family: "Lato";
+  font-weight: bold;
+}
+
+.faq .a {
+  margin-bottom: 20px;
+  padding-right: 60%;
+}
+
+.faq .a a {
+  color: #a8a8a8;
+}
 
 
+/*********************************/
 
 .fileChoose2 {
   position: relative;
