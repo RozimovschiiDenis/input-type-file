@@ -4,7 +4,7 @@ This is a small site with a small purpose to provide the code for a custom input
 
 #### How to use?
 
-1. Click [here](https://beaverden.github.io/inputtype/index.html/)
+1. Click [here](https://beaverden.github.io/input-type/)
 2. Press button "CODE" and click on HTML, CSS, JS.
 3. Each click will copy the needed code to your clipboard.
 4. Paste the code into your project and customize it
