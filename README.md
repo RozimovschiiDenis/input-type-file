@@ -13,3 +13,4 @@ This is a small site with a small purpose to provide the code for a custom input
 #### Tools Used
 1. [Normalize.css](https://necolas.github.io/normalize.css/)
 2. [Initializr](http://www.initializr.com/)
+3. [clipboard-js](https://www.npmjs.com/package/clipboard-js/)
