@@ -1,0 +1,29 @@
+.checkbox {
+  display: block;
+  height: 40px;
+}
+
+.checkbox label {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox input[type="checkbox"] + label:before {
+  position: relative;
+  top: 5px;
+  display:inline-block;
+  content:"";
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;         
+  border: 1px solid #a1a194;
+  border-radius: 1px; 
+}
+
+.checkbox input[type="checkbox"]:checked + label:before {
+  background: url("../img/checked.png") no-repeat;
+}

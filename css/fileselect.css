@@ -12,17 +12,19 @@ h2, h3, h4 {
   text-align: center;
 }
 
+
+
+
 .header {
   height: 55px;
   line-height: 55px;	 
   position: relative;
 }
 
-
 .header h2 {
   margin: 0;
   font-weight: 700;
-  color: #F92672;
+  color: #d3394c;
 }
 
 .header .type {
@@ -55,6 +57,7 @@ h2, h3, h4 {
 }
 
 
+
 .header .menu {
   position: absolute;
   left: 20px;
@@ -81,6 +84,10 @@ h2, h3, h4 {
   border-bottom: 3px solid #fff; 
 }
 
+
+
+
+
 .main {
   position: relative;
 }
@@ -88,6 +95,14 @@ h2, h3, h4 {
 .samples {
   padding: 60px 30px 100px 30px;
   background: #2B2B2B;
+}
+
+.samples.panel {
+  display: none;
+}
+
+.samples#panel_1 {
+  display: block;
 }
 
 .samples .sample {
@@ -114,6 +129,10 @@ h2, h3, h4 {
   cursor: pointer;
 }
 
+.code-icon {
+  display: none;
+}
+
 .samples .sample .label:hover {
   border: none;
   background-color: #a6e22e;
@@ -126,12 +145,15 @@ h2, h3, h4 {
 }
 
 
-.code {
-  position: relative;
-  padding: 30px 0px;
-  top: -80px;
-  text-align: center;
+
+.samples#checkboxes {
+  display: none;
 }
+
+
+
+
+
 
 .copied {
   text-align: center;
@@ -144,9 +166,11 @@ h2, h3, h4 {
   padding: 0px 20px;
   
   border: 1px solid #a6e22e;
-  border-radius: 5px;
   color: #a6e22e;
 }
+
+
+
 
 
 .code-header {
@@ -171,8 +195,6 @@ h2, h3, h4 {
   
 }
 
-
-
 .code-header > div > div {
   border-bottom: none;
   height: 40px;
@@ -184,6 +206,7 @@ h2, h3, h4 {
   border-color: #d3394c;
   color: #d3394c;
 }
+
 
 
 
@@ -200,7 +223,7 @@ h2, h3, h4 {
 
 .faq .a {
   margin-bottom: 20px;
-  padding-right: 60%;
+  padding-right: 40%;
 }
 
 .faq .a a {
@@ -208,7 +231,56 @@ h2, h3, h4 {
 }
 
 
-/*********************************/
+/************************************************/
+
+
+.fileChoose1 {
+  position: relative;
+  text-align: center;
+}
+
+.fileChoose1 .btn-choose {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  
+  border: 1px solid transparent;
+  background-color: #d3394c;
+}
+
+.fileChoose1 .btn-choose:hover {
+  border-color: #d3394c;
+  background-color: transparent;
+  color: #d3394c;
+}
+
+.fileChoose1 .fileChoose1-label {
+  display: block;
+  cursor: pointer;
+  padding: 0px 10px;
+  
+  color: #fff;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileChoose1 input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+
+/*****************************/
 
 .fileChoose2 {
   position: relative;
@@ -229,14 +301,19 @@ h2, h3, h4 {
 .fileChoose2 .btn-choose {
   position: relative;
   float: left;
-  width: 50%;
-  padding: 0px 20px;
+  width: 60%;
+  padding: 0px 10px;
   height: 40px;
   line-height: 40px;
   
   color: #fff;
+  
   border: 1px solid transparent;
   background-color: #d3394c;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .fileChoose2 .btn-choose:hover {
@@ -247,11 +324,12 @@ h2, h3, h4 {
 
 .fileChoose2 .fileChoose2-label {
   float: left;
-  width: 50%;
+  width: 40%;
   height: 40px;
   line-height: 40px;
-
-  font-family: "Verdana", sans-serif;
+  
+  padding: 0px 10px;
+  
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -273,53 +351,126 @@ h2, h3, h4 {
   opacity: 0;
 }
 
-/************************************************/
 
-
-.fileChoose1 {
-  position: relative;
-  text-align: center;
-}
-
-.fileChoose1 .btn-choose {
-  position: relative;
-  padding: 0px 20px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  
+/****************************/
+.samples.checkboxes {
   color: #fff;
-  border: 1px solid transparent;
-  background-color: #d3394c;
+  text-align: center;
 }
 
-.fileChoose1 .btn-choose:hover {
-  border-color: #d3394c;
-  background-color: transparent;
-  color: #d3394c;
+.samples.checkboxes .block {
+  display: inline-block;
 }
 
-.fileChoose1 .fileChoose1-label {
-  display: block;
+
+.checkbox {
+  float: left;
+  height: 40px;
+}
+
+.checkbox label {
   cursor: pointer;
-  font-family: "Verdana", sans-serif;
-  font-weight: bold;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: 16px;
 }
 
-.fileChoose1 input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  opacity: 0;
+.checkbox input[type="checkbox"] {
+  display: none;
 }
+
+.checkbox input[type="checkbox"] + label:before {
+  position: relative;
+  top: 5px;
+  display:inline-block;
+  content:"";
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;         
+  border: 1px solid #a1a194;
+  border-radius: 1px; 
+}
+
+.checkbox input[type="checkbox"]:checked + label:before {
+  background: url("../img/checked.png") no-repeat;
+}
+
+/*****************************/
+
+
+@media (max-width: 767px) {
+  .header .menu button {
+    font-size: 14px;
+  }
+  
+  .header .social ul a {
+    font-size: 20px;
+  }
+  
+  .faq .a {
+    padding-right: 30%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .header {
+    height: auto;
+    text-align: center;
+  }
+  
+  .header .menu ,
+  .header .social {
+    position: static;
+  }
+  
+  .header .menu button {
+    font-size: 17px;
+  }
+  
+  .header .social ul a {
+    font-size: 25px;
+  }
+  
+  .samples {
+    padding: 30px;
+  }
+  
+  .code-header > div {
+    font-size: 18px;
+    width: 60px;
+  }
+  
+  .samples .sample {
+    width: 100%;
+    padding: 30px 0;
+  }
+}
+
+
+@media (max-width: 425px) {
+  .code-text {
+    display: none;
+  }
+  
+  .code-icon {
+    display: block;
+  }
+  
+  .samples .sample .label {
+    width: 40px;
+  }
+  
+  .samples .sample .preview {
+    width: calc(100% - 50px);
+  }
+  .faq .q {
+    font-size: 22px;
+  }
+  .faq .a {
+    padding-right: 15%;
+    font-size: 15px;
+  }
+}
+
 
 
 

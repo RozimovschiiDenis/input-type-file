@@ -17,14 +17,19 @@
 .fileChoose2 .btn-choose {
   position: relative;
   float: left;
-  width: 50%;
-  padding: 0px 20px;
+  width: 60%;
+  padding: 0px 10px;
   height: 40px;
   line-height: 40px;
   
   color: #fff;
+  
   border: 1px solid transparent;
   background-color: #d3394c;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .fileChoose2 .btn-choose:hover {
@@ -35,11 +40,12 @@
 
 .fileChoose2 .fileChoose2-label {
   float: left;
-  width: 50%;
+  width: 40%;
   height: 40px;
   line-height: 40px;
-
-  font-family: "Verdana", sans-serif;
+  
+  padding: 0px 10px;
+  
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

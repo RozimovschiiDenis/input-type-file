@@ -1,5 +1,5 @@
 
-var FileSelectCustom = {
+var FileChooseCustom = {
     init: function() {
         document.addEventListener("DOMContentLoaded", function() {
             var selects = document.getElementsByClassName("file-input");
