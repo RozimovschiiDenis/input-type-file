@@ -189,7 +189,7 @@ h2, h3, h4 {
 .code-header > div {
   position: relative;
   display: inline-block;
-  width: 100px;
+  padding: 0px 15px;
   height: 50px;
   line-height: 50px;
 
@@ -201,11 +201,8 @@ h2, h3, h4 {
   
 }
 
-.code-header > div > div {
-  border-bottom: none;
-  height: 40px;
-  line-height: 40px;
-  cursor: pointer;
+.code-header > div a {
+  color: #fff;
 }
 
 .code-header > div:hover {
@@ -237,8 +234,7 @@ h2, h3, h4 {
 }
 
 
-/************************************************/
-
+/******************************/
 
 .fileChoose1 {
   position: relative;
@@ -285,8 +281,9 @@ h2, h3, h4 {
   opacity: 0;
 }
 
-
 /*****************************/
+
+
 
 .fileChoose2 {
   position: relative;
@@ -441,7 +438,7 @@ h2, h3, h4 {
   
   .code-header > div {
     font-size: 18px;
-    width: 60px;
+    padding: 0px 10px;
   }
   
   .samples .sample {
