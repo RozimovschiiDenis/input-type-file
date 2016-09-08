@@ -203,7 +203,7 @@ h2, h3, h4 {
 
 .code-header > div a,
 .code-header > div a .fa {
-  color: #fff;
+  color: #d3d3d3;
 }
 
 .code-header > div:hover {
