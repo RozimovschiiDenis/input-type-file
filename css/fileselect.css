@@ -111,12 +111,19 @@ h2, h3, h4 {
   padding: 50px;
 }
 
+.samples .sample .wrapper {
+  position: relative;
+  padding-left: 110px;
+}
+
 .samples .sample .label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  
   width: 100px;
-  margin-right: 10px;
   height: 40px;
   line-height: 40px;
-  float: left;
   
   text-align: center;
   font-size: 15px;
@@ -129,19 +136,18 @@ h2, h3, h4 {
   cursor: pointer;
 }
 
-.code-icon {
-  display: none;
-}
-
 .samples .sample .label:hover {
   border: none;
   background-color: #a6e22e;
   color: #000;
 }
 
+.code-icon {
+  display: none;
+}
+
 .samples .sample .preview {
-  float: left;
-  width: calc(100% - 110px);
+  width: 100%;
 }
 
 
@@ -358,13 +364,12 @@ h2, h3, h4 {
   text-align: center;
 }
 
-.samples.checkboxes .block {
+.samples.checkboxes .wrapper {
   display: inline-block;
 }
 
 
 .checkbox {
-  float: left;
   height: 40px;
 }
 
@@ -431,7 +436,7 @@ h2, h3, h4 {
   }
   
   .samples {
-    padding: 30px;
+    padding: 20px;
   }
   
   .code-header > div {
@@ -459,9 +464,10 @@ h2, h3, h4 {
     width: 40px;
   }
   
-  .samples .sample .preview {
-    width: calc(100% - 50px);
+  .samples .sample .wrapper {
+    padding-left: 50px;
   }
+
   .faq .q {
     font-size: 22px;
   }
