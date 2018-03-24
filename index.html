@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>beaverden | INPUT[TYPE]</title>
     <meta charset="utf-8">
-    
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="Custom input file, input checkbox, export HTML, CSS, JS in a few seconds">
-    
     <meta name="keywords" content="file chooser, file select, custom file select, file select css, checkbox, custom checkbox, checkbox css, checkbox html, custom input" />
-    
     <meta name="author" content="Rozimovschii Denis">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <link rel="icon" href="/favicon.ico" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    
-    <title>beaverden | INPUT[TYPE]</title>
-    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    
     <link rel="stylesheet" href="css/normalize.css"> 
-    
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet"> 
-   
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/fileselect.css">   
 </head>
 
 
 <body>
-    <header class="header">
+    <nav class="header">
 		<h2>input<span class="type">[type]</span></h2>
 		<div class="menu">
             <button id="link_1" class="panel-toggle active" data-panel="panel_1" >File</button>
@@ -55,15 +44,14 @@
                 </li>
 		    </ul>
         </div>
-	</header>
+	</nav>
    
-    <div class="main">
+    <section class="main">
         <div class="copied" style="opacity: 0.0; display: none;">
             <span>Text copied to clipboard</span>
         </div>
 
-        <div id="panel_1" class="samples panel">
-           
+        <article id="panel_1" class="samples panel">
             <div class="sample">
                 <div class="wrapper">
                     <div class="label code-toggle" data-show="header1">
@@ -72,12 +60,11 @@
                             <i class="fa fa-download" aria-hidden="true"></i>
                         </span>
                     </div>
-
-                    <div class="fileChoose1 preview">
-                        <div class="btn-choose">
-                            <div class="fileChoose1-label">Choose file...</div>
-                            <input type="file" class="file-input" data-box="fileChoose1" name="fileChoose1-file">
-                        </div>
+                    <div id="file-select1" class="custom-file">
+                        <label for="custom-file-input1">
+                            Choose file...
+                        </label>
+                        <input type="file" id="custom-file-input1" class="custom-file-input">
                     </div>
                 </div> <!-- /.wrapper -->
                 
@@ -90,40 +77,11 @@
                             <i class="fa fa-code"></i>
                         </a>
                     </div>
-                </div>  <!-- /.code-header -->
-            </div> <!-- /.sample -->
-
-            <div class="sample">
-                <div class="wrapper">
-                    <div class="label code-toggle" data-show="header2">
-                        <span class="code-text">Code</span>
-                        <span class="code-icon">
-                            <i class="fa fa-download" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                    <div class="fileChoose2 preview block">
-                        <div class="btn-choose">  
-                            <span>Choose file...</span>
-                            <input type="file" class="file-input" data-box="fileChoose2" name="fileChoose2-file">
-                        </div>
-                        <div class="fileChoose2-label">No file</div>
-                    </div>
-                </div> <!-- /.wrapper -->
-                
-                <div id="header2" class="code-header" style="display: none; opacity: 0.0; ">
-                    <div id="html2" class="copy-link active">HTML</div>
-                    <div id="css2" class="copy-link">CSS</div>
-                    <div id="js2" class="copy-link">JS</div>
-                    <div>
-                        <a href="https://github.com/beaverden/input-type/tree/master/partials" target="_blank">
-                            <i class="fa fa-code"></i>
-                        </a>
-                    </div>
                 </div> <!-- /.code-header -->                          
             </div> <!-- /.sample -->     
-        </div>   <!-- /.samples -->     
+        </article>   <!-- /.samples -->     
 
-        <div id="panel_2" class="samples checkboxes panel">
+        <article id="panel_2" class="samples checkboxes panel">
            
             <div class="sample">
                 <div class="wrapper">
@@ -150,24 +108,27 @@
                 </div>  <!-- /.code-header -->   
             </div> <!-- /.sample -->
 
-        </div>
-    </div> <!-- /.main --> 
+        </article>
+    </section> <!-- /.main --> 
     
-    <div class="faq">
-        <div class="q">WHY?</div>
-        <div class="a">This little tool was made in the need of replacing the standart inputs with crossbrowser customizable ones.</div>
-        <div class="q">HOW?</div>
-        <div class="a">Just press the code button, copy to clipboard the needed code. Or click <a href="https://github.com/beaverden/input-type/tree/master/partials">here</a> to see the code for every part.</div>
-        <div class="q">JS?</div>
-        <div class="a">The main and the only role of JavaScript in here is changing the text on the labels after selecting the file. You can leave JavaScript aside if you don't need this feature.</div>
-    </div>
+    <section class="faq">
+        <article>
+            <div class="q">WHY?</div>
+            <div class="a">This little tool was made in the need of replacing the standart inputs with crossbrowser customizable ones.</div>
+        </article>
+        <article>
+            <div class="q">HOW?</div>
+            <div class="a">Just press the code button, copy to clipboard the needed code. Or click <a href="https://github.com/beaverden/input-type/tree/master/partials">here</a> to see the code for every part.</div>
+        </article>
+        <article>
+            <div class="q">JS?</div>
+            <div class="a">The main and the only role of JavaScript in here is changing the text on the labels after selecting the file. You can leave JavaScript aside if you don't need this feature.</div>
+        </article>
+    </section>
 
    
     <script src="js/clipboard.min.js"></script>
-    
-    
     <script type="text/javascript" src="js/app.js"></script>
-    
     <script>
         
         (function() {

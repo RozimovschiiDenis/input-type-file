@@ -74,18 +74,12 @@ var fileChooseApp = {
     
     assignAttibutes: function() {
         this.setClipboard({
-            'html1' : '<div class="fileChoose1">\n'+'	<div class="btn-choose">\n'+'		<div class="fileChoose1-label">Choose file...</div>\n'+'		<input type="file" class="file-input" data-box="fileChoose1" name="fileChoose1-file">\n'+'	</div>\n'+'</div>\n',
+            'html1' : '<div id="file-select1" class="custom-file">\n    <label for="custom-file-input1">Choose file...</label>\n    <input type="file" id="custom-file-input1" class="custom-file-input">\n</div>',
             
-            'css1' : '.fileChoose1 {\n  position: relative;\n  text-align: center;\n}\n\n.fileChoose1 .btn-choose {\n  position: relative;\n  height: 40px;\n  line-height: 40px;\n  text-align: center;\n\n  border: 1px solid transparent;\n  background-color: #d3394c;\n}\n\n.fileChoose1 .btn-choose:hover {\n  border-color: #d3394c;\n  background-color: transparent;\n  color: #d3394c;\n}\n\n.fileChoose1 .fileChoose1-label {\n  display: block;\n  cursor: pointer;\n  padding: 0px 10px;\n\n  color: #fff;\n\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n.fileChoose1 input {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  cursor: pointer;\n  opacity: 0;\n}\n',
+            'css1' : '.custom-file {\n  border: 1px solid #d3394c;\n  text-align: center;\n  height: 40px;\n  line-height: 38px;\n  width: 100%;\n  color: #FFFFFF;\n}\n\n.custom-file > label {\n  display: block;\n  padding: 0px 15px;\n  background-color: #d3394c;\n  border-right: 1px solid transparent;\n  cursor: pointer;\n}\n\n.custom-file:hover > label {\n  border-right-color: #d3394c;\n  background-color: transparent;\n}\n\n.custom-file input[type="file"] {\n  display: none;\n}',
             
-            'js1' : 'var FileChooseCustom = {\n		init: function() {\n			document.addEventListener("DOMContentLoaded", function() {\n				var selects = document.getElementsByClassName("file-input");\n				for (var i = 0; i<selects.length; i++) {\n\n					selects[i].onchange = function() {\n						var id = this.getAttribute("data-box");\n						var label = document.getElementsByClassName(id + "-label")[0]\n						label.innerHTML = this.files[0].name;\n					}\n				}\n			});\n		}\n	};\n	(function() {\n		FileSelectCustom.init();\n	})();',
-            
-            'html2' : '<div class="fileChoose2">\n	<div class="btn-choose">\n		<span>Choose file...</span>\n		<input type="file" class="file-input" data-box="fileChoose2" name="fileChoose2-file">\n	</div>\n	<div class="fileChoose2-label">No file</div>\n</div>\n',
-            
-            'css2' : '.fileChoose2 {\n  position: relative;\n  text-align: center;\n}\n\n.fileChoose2:before {\n  content: " ";\n  display: table;\n}\n\n.fileChoose2:after {\n  content: " ";\n  display: table;\n  clear: both;\n}\n\n.fileChoose2 .btn-choose {\n  position: relative;\n  float: left;\n  width: 60%;\n  padding: 0px 10px;\n  height: 40px;\n  line-height: 40px;\n\n  color: #fff;\n\n  border: 1px solid transparent;\n  background-color: #d3394c;\n\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n.fileChoose2 .btn-choose:hover {\n  border-color: #d3394c;\n  background-color: transparent;\n  color: #fff;\n}\n\n.fileChoose2 .fileChoose2-label {\n  float: left;\n  width: 40%;\n  height: 40px;\n  line-height: 40px;\n\n  padding: 0px 10px;\n\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n\n  border: 1px solid #d3394c;\n  border-left: none;\n  color: #fff;\n}\n\n.fileChoose2 input {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  cursor: pointer;\n  opacity: 0;\n}\n',
-            
-            'js2' : 'var FileChooseCustom = {\n		init: function() {\n			document.addEventListener("DOMContentLoaded", function() {\n				var selects = document.getElementsByClassName("file-input");\n				for (var i = 0; i<selects.length; i++) {\n\n					selects[i].onchange = function() {\n						var id = this.getAttribute("data-box");\n						var label = document.getElementsByClassName(id + "-label")[0]\n						label.innerHTML = this.files[0].name;\n					}\n				}\n			});\n		}\n	};\n	(function() {\n		FileSelectCustom.init();\n	})();',
-            
+            'js1' : 'document.addEventListener("DOMContentLoaded", function() {\n   var selects = document.getElementsByClassName("custom-file-input");\n   for (var i = 0; i<selects.length; i++) {\n      selects[i].onchange = function() {\n            var unique_id = this.id;\n          var element = document.querySelector(\'label[for="\'+unique_id+\'"]\');\n           element.innerHTML = this.files[0].name;\n       }\n }\n});\n',
+
             'html3' : '<div class="checkbox">\n    <input id="select-1" type="checkbox">\n    <label for="select-1">Background image</label>\n</div>\n',
             
             'css3' : '.checkbox {\n  display: block;\n  height: 40px;\n}\n\n.checkbox label {\n  cursor: pointer;\n  font-size: 16px;\n}\n\n.checkbox input[type="checkbox"] {\n  display: none;\n}\n\n.checkbox input[type="checkbox"] + label:before {\n  position: relative;\n  top: 5px;\n  display:inline-block;\n  content:"";\n  height: 20px;\n  width: 20px;\n  margin-right: 10px;\n  border: 1px solid #a1a194;\n  border-radius: 1px;\n}\n\n.checkbox input[type="checkbox"]:checked + label:before {\n  background: url("../img/checked.png") no-repeat;\n}\n',
@@ -173,13 +167,12 @@ var PanelModule = {
 var FileChooseCustom = {
     init: function() {
         document.addEventListener("DOMContentLoaded", function() {
-            var selects = document.getElementsByClassName("file-input");
+            var selects = document.getElementsByClassName("custom-file-input");
             for (var i = 0; i<selects.length; i++) {
-
                 selects[i].onchange = function() {
-                    var id = this.getAttribute("data-box");
-                    var label = document.getElementsByClassName(id + "-label")[0]
-                    label.innerHTML = this.files[0].name;
+                    var unique_id = this.id;
+                    var element = document.querySelector('label[for="'+unique_id+'"]');
+                    element.innerHTML = this.files[0].name;
                 }
             }
         });

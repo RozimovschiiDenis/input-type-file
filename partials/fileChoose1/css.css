@@ -1,44 +1,25 @@
-.fileChoose1 {
-  position: relative;
+.custom-file {
+  border: 1px solid #d3394c;
   text-align: center;
-}
-
-.fileChoose1 .btn-choose {
-  position: relative;
   height: 40px;
-  line-height: 40px;
-  text-align: center;
-  
-  border: 1px solid transparent;
-  background-color: #d3394c;
-}
-
-.fileChoose1 .btn-choose:hover {
-  border-color: #d3394c;
-  background-color: transparent;
-  color: #d3394c;
-}
-
-.fileChoose1 .fileChoose1-label {
-  display: block;
-  cursor: pointer;
-  padding: 0px 10px;
-  
-  color: #fff;
-  
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.fileChoose1 input {
-  position: absolute;
-  top: 0;
-  left: 0;
+  line-height: 38px;
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  color: #FFFFFF;
+}
+
+.custom-file > label {
+  display: block;
+  padding: 0px 15px;
+  background-color: #d3394c;
+  border-right: 1px solid transparent;
   cursor: pointer;
-  opacity: 0;
+}
+
+.custom-file:hover > label {
+  border-right-color: #d3394c;
+  background-color: transparent;
+}
+
+.custom-file input[type="file"] {
+  display: none;
 }
